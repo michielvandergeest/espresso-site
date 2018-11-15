@@ -1,0 +1,14 @@
+body {
+    background: #fefefe;
+    padding: 1em;
+    font-family: arial, verdana, sans;
+}
+
+h1 {
+    font-size: 32px;
+    border-bottom: solid 1px #ccc;
+}
+
+p, li {
+    line-height: 1.2em;
+}
