@@ -50,7 +50,7 @@ if(fs.existsSync(packageFile)) {
         packageContents.scripts = {}
     }
 
-    packageContents.scripts['espresso:serve'] = 'node ./node_modules/espresso/server.js'
+    packageContents.scripts['espresso:serve'] = 'node ./node_modules/espresso-site/server.js'
 
     fs.writeFileSync(packageFile, JSON.stringify(packageContents, null, 2))
 
