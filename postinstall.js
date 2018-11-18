@@ -11,7 +11,7 @@ if(!fs.existsSync(path.join(cwd, contentFolder))) {
 
     fs.mkdirSync(path.join(cwd, contentFolder))
     fs.createReadStream(path.join(__dirname, contentFolder, 'home.pug')).pipe(fs.createWriteStream(path.join(cwd, contentFolder, 'home.pug')))
-    fs.createReadStream(path.join(__dirname, contentFolder, 'about.pug')).pipe(fs.createWriteStream(path.join(cwd, contentFolder, 'about.pug')))
+    fs.createReadStream(path.join(__dirname, contentFolder, 'getting-started.pug')).pipe(fs.createWriteStream(path.join(cwd, contentFolder, 'getting-started.pug')))
 
     console.log('Created "content" folder')
 }
