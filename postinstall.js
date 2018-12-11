@@ -51,10 +51,11 @@ if(fs.existsSync(packageFile)) {
     }
 
     packageContents.scripts['espresso:serve'] = 'node ./node_modules/espresso-site/server.js'
+    packageContents.scripts['espresso:dev'] = 'node ./node_modules/espresso-site/dev.js'
 
     fs.writeFileSync(packageFile, JSON.stringify(packageContents, null, 2))
 
-    console.log('Added "espresso:serve" script to package.json')
+    console.log('Added "espresso:serve" and "espresso:dev" scripts to package.json')
 }
 else {
     console.log('No "package.json" found in project')
