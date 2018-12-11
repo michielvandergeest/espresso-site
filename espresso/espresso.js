@@ -7,6 +7,7 @@ const branding = require('./branding.js')
 const done = require('./done.js')
 const error = require('./error.js')
 const serve = require('./serve.js')
+const watch = require('./watch.js')
 const app = require('./app.js')
 
 const espresso = {
@@ -29,5 +30,7 @@ module.exports = {
     app(config) {
         return app(config, espresso)
     },
-
+    watch(config) {
+        return watch(config, espresso)
+    },
 }

@@ -7,7 +7,7 @@ module.exports = (config, espresso) => {
         app(config, espresso)
     )
 
-    server.listen(config.port, (err) => {
+    return server.listen(config.port, (err) => {
         if(err) {
             console.err(err)
         }

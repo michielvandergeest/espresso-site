@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/michielvandergeest/espresso-site#readme",
   "dependencies": {
+    "chokidar": "^2.0.4",
     "deepmerge": "^2.2.1",
     "express": "^4.16.4",
     "file-extension": "^4.0.5",
