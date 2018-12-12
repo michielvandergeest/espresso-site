@@ -7,7 +7,7 @@ module.exports = (config, espresso) => {
     espresso.init(app, config)
     espresso.setRoutes(app, espresso.getRoutes())
 
-    app.use(espresso.found, [espresso.layout, espresso.branding, espresso.done])
+    app.use(espresso.favicon, espresso.found, [espresso.layout, espresso.branding, espresso.done])
     app.use([espresso.error, espresso.layout, espresso.done])
 
     return app

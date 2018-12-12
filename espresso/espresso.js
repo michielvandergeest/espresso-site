@@ -9,6 +9,7 @@ const error = require('./error.js')
 const serve = require('./serve.js')
 const watch = require('./watch.js')
 const app = require('./app.js')
+const favicon = require('./favicon.js')
 
 const espresso = {
     init,
@@ -19,6 +20,7 @@ const espresso = {
     branding,
     done,
     error,
+    favicon,
 }
 
 module.exports = {
