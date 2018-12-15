@@ -20,9 +20,9 @@ module.exports = (config, espresso) => {
                     console.log('Restarting server ...')
                     setTimeout(() => {
                         server = serve(config, espresso)
-                    }, 0)
+                    }, 500)
                 })
-            }, 0)
+            }, 500)
 
         });
     })
