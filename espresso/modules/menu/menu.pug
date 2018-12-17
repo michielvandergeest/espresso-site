@@ -1,0 +1,7 @@
+mixin menu()
+    - const items = scripts.menu.getItems(routes);
+
+    ul.menu
+        each item in items
+            li
+                a(href=item.slug)= item.label || item.title
