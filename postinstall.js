@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs-extra')
 const path = require('path')
 
 // the source directory that this package is being installed into
@@ -10,9 +10,7 @@ const contentFolder = 'content'
 if(!fs.existsSync(path.join(cwd, contentFolder))) {
 
     fs.mkdirSync(path.join(cwd, contentFolder))
-    fs.createReadStream(path.join(__dirname, contentFolder, 'home.pug')).pipe(fs.createWriteStream(path.join(cwd, contentFolder, 'home.pug')))
-    fs.createReadStream(path.join(__dirname, contentFolder, 'getting-started.pug')).pipe(fs.createWriteStream(path.join(cwd, contentFolder, 'getting-started.pug')))
-
+    fs.copySync(path.join(__dirname, contentFolder), path.join(cwd, contentFolder))
     console.log('Created "content" folder')
 }
 
@@ -23,9 +21,7 @@ const layoutsFolder = 'layouts'
 if(!fs.existsSync(path.join(cwd, layoutsFolder))) {
 
     fs.mkdirSync(path.join(cwd, layoutsFolder))
-    fs.createReadStream(path.join(__dirname, layoutsFolder, 'layout.pug')).pipe(fs.createWriteStream(path.join(cwd, layoutsFolder, 'layout.pug')))
-    fs.createReadStream(path.join(__dirname, layoutsFolder, 'home.pug')).pipe(fs.createWriteStream(path.join(cwd, layoutsFolder, 'home.pug')))
-    fs.createReadStream(path.join(__dirname, layoutsFolder, 'error.pug')).pipe(fs.createWriteStream(path.join(cwd, layoutsFolder, 'error.pug')))
+    fs.copySync(path.join(__dirname, layoutsFolder), path.join(cwd, layoutsFolder))
 
     console.log('Created "layouts" folder')
 }
@@ -36,7 +32,7 @@ const assetsFolder = 'assets'
 if(!fs.existsSync(path.join(cwd, assetsFolder))) {
 
     fs.mkdirSync(path.join(cwd, assetsFolder))
-    fs.createReadStream(path.join(__dirname, assetsFolder, 'style.css')).pipe(fs.createWriteStream(path.join(cwd, assetsFolder, 'style.css')))
+    fs.copySync(path.join(__dirname, assetsFolder), path.join(cwd, assetsFolder))
 
     console.log('Created "assets" folder')
 }
